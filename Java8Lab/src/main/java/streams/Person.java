@@ -1,4 +1,4 @@
-package stream;
+package streams;
 
 import java.time.LocalDate;
 
@@ -30,6 +30,10 @@ public class Person {
 	}
 	public void setName(String name) {
 		_name = name;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("test");
 	}
 
 }
