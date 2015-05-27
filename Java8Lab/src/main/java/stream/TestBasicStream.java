@@ -40,7 +40,8 @@ public class TestBasicStream {
 
 	public static void main(String[] args) {
 
-		new TestBasicStream().printAllForEach();
+		TestBasicStream tbs = new TestBasicStream();
+		tbs.printAllForEach();
 	}
 
 }
