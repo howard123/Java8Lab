@@ -1,6 +1,8 @@
 package dateandtime;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -22,13 +24,19 @@ public class TestDateAndTime {
 		System.out.println(ldt.getSecond());
 	}
 
+	// This method is testing on plusWeeks Api method
 	public void printPlusWeek() {
 		System.out.println(ldt.plusWeeks(1));
 	}
 
+	// This method will truncate the time format till second
 	public void printTruncateSecond() {
 		System.out.println(ldt.truncatedTo(ChronoUnit.SECONDS));
 
+	}
+
+	public void printLocalDateOf() {
+		System.out.println(LocalDate.of(2012, Month.DECEMBER, 12));
 	}
 
 	public static void main(String[] args) {
@@ -38,5 +46,7 @@ public class TestDateAndTime {
 		td.printSecond();
 		td.printPlusWeek();
 		td.printTruncateSecond();
+
+		td.printLocalDateOf();
 	}
 }
