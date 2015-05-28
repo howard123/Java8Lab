@@ -3,6 +3,7 @@ package dateandtime;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -39,6 +40,15 @@ public class TestDateAndTime {
 		System.out.println(LocalDate.of(2012, Month.DECEMBER, 12));
 	}
 
+	public void testPeriod() {
+		// Period will take an 3 parameter year , month, day
+		Period period = Period.of(0, 0, 10);
+		System.out.println("This moment plus 10 days is" + ldt.plus(period));
+
+		Period period2 = Period.of(0, 1, 0);
+		System.out.println("This moment plus 1 month is" + ldt.plus(period2));
+	}
+
 	public static void main(String[] args) {
 		TestDateAndTime td = new TestDateAndTime();
 
@@ -48,5 +58,6 @@ public class TestDateAndTime {
 		td.printTruncateSecond();
 
 		td.printLocalDateOf();
+		td.testPeriod();
 	}
 }
